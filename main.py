@@ -247,7 +247,7 @@ async def lifespan(app: FastAPI):
     await on_shutdown()
 
 
-app = FastAPI(docs_url="/docs", redoc_url=None, lifespan=lifespan)
+app = FastAPI(docs_url="/docs", redoc_url=None, lifespan=lifespan, root_path="/backend_pipeline")
 
 app.state.PIPELINES = PIPELINES
 
